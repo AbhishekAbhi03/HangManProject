@@ -1,0 +1,1113 @@
+[
+    {
+        "classes": [
+            {
+                "classInfos": [
+                    {
+                        "name": "QML.Element",
+                        "value": "Hangman"
+                    }
+                ],
+                "className": "HangmanGame",
+                "methods": [
+                    {
+                        "access": "public",
+                        "name": "reset",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "reveal",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "gameOverReveal",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "letterString",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "requestLetter",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "word",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "guessWord",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "letter",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "isVowel",
+                        "returnType": "bool"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "count",
+                                "type": "int"
+                            }
+                        ],
+                        "name": "setVowelsAvailable",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "count",
+                                "type": "int"
+                            }
+                        ],
+                        "name": "setWordsGiven",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "count",
+                                "type": "int"
+                            }
+                        ],
+                        "name": "setWordsGuessedCorrectly",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "score",
+                                "type": "int"
+                            }
+                        ],
+                        "name": "setScore",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "word",
+                        "notify": "wordChanged",
+                        "read": "word",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "lettersOwned",
+                        "notify": "lettersOwnedChanged",
+                        "read": "lettersOwned",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "name": "vowels",
+                        "read": "vowels",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 3,
+                        "name": "consonants",
+                        "read": "consonants",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 4,
+                        "name": "errorCount",
+                        "notify": "errorCountChanged",
+                        "read": "errorCount",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 5,
+                        "name": "vowelsUnlocked",
+                        "notify": "vowelsUnlockedChanged",
+                        "read": "vowelsUnlocked",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false,
+                        "write": "setVowelsUnlocked"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 6,
+                        "name": "vowelsAvailable",
+                        "notify": "vowelsAvailableChanged",
+                        "read": "vowelsAvailable",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false,
+                        "write": "setVowelsAvailable"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 7,
+                        "name": "wordsGiven",
+                        "notify": "wordsGivenChanged",
+                        "read": "wordsGiven",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false,
+                        "write": "setWordsGiven"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 8,
+                        "name": "wordsGuessedCorrectly",
+                        "notify": "wordsGuessedCorrectlyChanged",
+                        "read": "wordsGuessedCorrectly",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false,
+                        "write": "setWordsGuessedCorrectly"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 9,
+                        "name": "score",
+                        "notify": "scoreChanged",
+                        "read": "score",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false,
+                        "write": "setScore"
+                    }
+                ],
+                "qualifiedClassName": "HangmanGame",
+                "signals": [
+                    {
+                        "access": "public",
+                        "name": "wordChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "lettersOwnedChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "errorCountChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "vowel",
+                                "type": "QChar"
+                            }
+                        ],
+                        "name": "vowelBought",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "wasSuccessful",
+                                "type": "bool"
+                            }
+                        ],
+                        "name": "purchaseWasSuccessful",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "unlocked",
+                                "type": "bool"
+                            }
+                        ],
+                        "name": "vowelsUnlockedChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "arg",
+                                "type": "int"
+                            }
+                        ],
+                        "name": "vowelsAvailableChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "arg",
+                                "type": "int"
+                            }
+                        ],
+                        "name": "wordsGivenChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "arg",
+                                "type": "int"
+                            }
+                        ],
+                        "name": "wordsGuessedCorrectlyChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "arg",
+                                "type": "int"
+                            }
+                        ],
+                        "name": "scoreChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "name": "letter",
+                                "type": "QChar"
+                            }
+                        ],
+                        "name": "registerLetterBought",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "hangmangame.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "InAppProduct",
+                "enums": [
+                    {
+                        "isClass": false,
+                        "isFlag": false,
+                        "name": "ProductType",
+                        "values": [
+                            "Consumable",
+                            "Unlockable"
+                        ]
+                    }
+                ],
+                "methods": [
+                    {
+                        "access": "public",
+                        "name": "purchase",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "identifier",
+                        "read": "identifier",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "productType",
+                        "read": "productType",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "ProductType",
+                        "user": false
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "name": "price",
+                        "read": "price",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 3,
+                        "name": "title",
+                        "read": "title",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 4,
+                        "name": "description",
+                        "read": "description",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "InAppProduct",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "inappproduct.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "InAppPurchaseBackend",
+                "object": true,
+                "qualifiedClassName": "InAppPurchaseBackend",
+                "signals": [
+                    {
+                        "access": "public",
+                        "name": "ready",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "transaction",
+                                "type": "InAppTransaction*"
+                            }
+                        ],
+                        "name": "transactionReady",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "productType",
+                                "type": "InAppProduct::ProductType"
+                            },
+                            {
+                                "name": "identifier",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "productQueryFailed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "product",
+                                "type": "InAppProduct*"
+                            }
+                        ],
+                        "name": "productQueryDone",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "inapppurchasebackend.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "InAppStore",
+                "methods": [
+                    {
+                        "access": "public",
+                        "name": "restorePurchases",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "productType",
+                                "type": "InAppProduct::ProductType"
+                            },
+                            {
+                                "name": "identifier",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "registerProduct",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "identifier",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "registeredProduct",
+                        "returnType": "InAppProduct*"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "propertyName",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "value",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "setPlatformProperty",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "InAppStore",
+                "signals": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "product",
+                                "type": "InAppProduct*"
+                            }
+                        ],
+                        "name": "productRegistered",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "productType",
+                                "type": "InAppProduct::ProductType"
+                            },
+                            {
+                                "name": "identifier",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "productUnknown",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "transaction",
+                                "type": "InAppTransaction*"
+                            }
+                        ],
+                        "name": "transactionReady",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "private",
+                        "name": "registerPendingProducts",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "type": "InAppProduct*"
+                            }
+                        ],
+                        "name": "registerProduct",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "inappstore.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "classInfos": [
+                    {
+                        "name": "QML.Element",
+                        "value": "Transaction"
+                    },
+                    {
+                        "name": "QML.Foreign",
+                        "value": "QQmlTypeNotAvailable"
+                    }
+                ],
+                "className": "InAppTransaction",
+                "enums": [
+                    {
+                        "isClass": false,
+                        "isFlag": false,
+                        "name": "TransactionStatus",
+                        "values": [
+                            "Unknown",
+                            "PurchaseApproved",
+                            "PurchaseFailed",
+                            "PurchaseRestored"
+                        ]
+                    },
+                    {
+                        "isClass": false,
+                        "isFlag": false,
+                        "name": "FailureReason",
+                        "values": [
+                            "NoFailure",
+                            "CanceledByUser",
+                            "ErrorOccurred"
+                        ]
+                    }
+                ],
+                "methods": [
+                    {
+                        "access": "public",
+                        "name": "finalize",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "propertyName",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "platformProperty",
+                        "returnType": "QString"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "status",
+                        "read": "status",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "TransactionStatus",
+                        "user": false
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "product",
+                        "read": "product",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "InAppProduct*",
+                        "user": false
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "name": "orderId",
+                        "read": "orderId",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 3,
+                        "name": "failureReason",
+                        "read": "failureReason",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "FailureReason",
+                        "user": false
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 4,
+                        "name": "errorString",
+                        "read": "errorString",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 5,
+                        "name": "timestamp",
+                        "read": "timestamp",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QDateTime",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "InAppTransaction",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "inapptransaction.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "classInfos": [
+                    {
+                        "name": "QML.Element",
+                        "value": "Product"
+                    }
+                ],
+                "className": "InAppProductQmlType",
+                "enums": [
+                    {
+                        "isClass": false,
+                        "isFlag": false,
+                        "name": "Status",
+                        "values": [
+                            "Uninitialized",
+                            "PendingRegistration",
+                            "Registered",
+                            "Unknown"
+                        ]
+                    },
+                    {
+                        "isClass": false,
+                        "isFlag": false,
+                        "name": "ProductType",
+                        "values": [
+                            "Consumable",
+                            "Unlockable"
+                        ]
+                    }
+                ],
+                "interfaces": [
+                    [
+                        {
+                            "className": "QQmlParserStatus",
+                            "id": "\"org.qt-project.Qt.QQmlParserStatus\""
+                        }
+                    ]
+                ],
+                "methods": [
+                    {
+                        "access": "public",
+                        "name": "purchase",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "resetStatus",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "identifier",
+                        "notify": "identifierChanged",
+                        "read": "identifier",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "setIdentifier"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "type",
+                        "notify": "typeChanged",
+                        "read": "type",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "ProductType",
+                        "user": false,
+                        "write": "setType"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "name": "price",
+                        "notify": "priceChanged",
+                        "read": "price",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 3,
+                        "name": "title",
+                        "notify": "titleChanged",
+                        "read": "title",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 4,
+                        "name": "description",
+                        "notify": "descriptionChanged",
+                        "read": "description",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 5,
+                        "name": "status",
+                        "notify": "statusChanged",
+                        "read": "status",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "Status",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 6,
+                        "name": "store",
+                        "notify": "storeChanged",
+                        "read": "store",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "InAppStoreQmlType*",
+                        "user": false,
+                        "write": "setStore"
+                    }
+                ],
+                "qualifiedClassName": "InAppProductQmlType",
+                "signals": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "transaction",
+                                "type": "InAppTransaction*"
+                            }
+                        ],
+                        "name": "purchaseSucceeded",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "transaction",
+                                "type": "InAppTransaction*"
+                            }
+                        ],
+                        "name": "purchaseFailed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "transaction",
+                                "type": "InAppTransaction*"
+                            }
+                        ],
+                        "name": "purchaseRestored",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "identifierChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "statusChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "priceChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "titleChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "descriptionChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "storeChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "typeChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "name": "transaction",
+                                "type": "InAppTransaction*"
+                            }
+                        ],
+                        "name": "handleTransaction",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "name": "product",
+                                "type": "InAppProduct*"
+                            }
+                        ],
+                        "name": "handleProductRegistered",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "type": "InAppProduct::ProductType"
+                            },
+                            {
+                                "name": "identifier",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "handleProductUnknown",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    },
+                    {
+                        "access": "public",
+                        "name": "QQmlParserStatus"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "inappproductqmltype.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "classInfos": [
+                    {
+                        "name": "QML.Element",
+                        "value": "Store"
+                    }
+                ],
+                "className": "InAppStoreQmlType",
+                "methods": [
+                    {
+                        "access": "public",
+                        "name": "restorePurchases",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "InAppStoreQmlType",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "inappstoreqmltype.h",
+        "outputRevision": 68
+    }
+]

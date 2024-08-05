@@ -1,0 +1,369 @@
+{
+    "classes": [
+        {
+            "classInfos": [
+                {
+                    "name": "QML.Element",
+                    "value": "Hangman"
+                }
+            ],
+            "className": "HangmanGame",
+            "methods": [
+                {
+                    "access": "public",
+                    "name": "reset",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "reveal",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "gameOverReveal",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "letterString",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "requestLetter",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "word",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "guessWord",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "letter",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "isVowel",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "count",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setVowelsAvailable",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "count",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setWordsGiven",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "count",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setWordsGuessedCorrectly",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "score",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setScore",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "word",
+                    "notify": "wordChanged",
+                    "read": "word",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "lettersOwned",
+                    "notify": "lettersOwnedChanged",
+                    "read": "lettersOwned",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 2,
+                    "name": "vowels",
+                    "read": "vowels",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 3,
+                    "name": "consonants",
+                    "read": "consonants",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 4,
+                    "name": "errorCount",
+                    "notify": "errorCountChanged",
+                    "read": "errorCount",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 5,
+                    "name": "vowelsUnlocked",
+                    "notify": "vowelsUnlockedChanged",
+                    "read": "vowelsUnlocked",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "bool",
+                    "user": false,
+                    "write": "setVowelsUnlocked"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 6,
+                    "name": "vowelsAvailable",
+                    "notify": "vowelsAvailableChanged",
+                    "read": "vowelsAvailable",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setVowelsAvailable"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 7,
+                    "name": "wordsGiven",
+                    "notify": "wordsGivenChanged",
+                    "read": "wordsGiven",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setWordsGiven"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 8,
+                    "name": "wordsGuessedCorrectly",
+                    "notify": "wordsGuessedCorrectlyChanged",
+                    "read": "wordsGuessedCorrectly",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setWordsGuessedCorrectly"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 9,
+                    "name": "score",
+                    "notify": "scoreChanged",
+                    "read": "score",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setScore"
+                }
+            ],
+            "qualifiedClassName": "HangmanGame",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "wordChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "lettersOwnedChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "errorCountChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "vowel",
+                            "type": "QChar"
+                        }
+                    ],
+                    "name": "vowelBought",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "wasSuccessful",
+                            "type": "bool"
+                        }
+                    ],
+                    "name": "purchaseWasSuccessful",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "unlocked",
+                            "type": "bool"
+                        }
+                    ],
+                    "name": "vowelsUnlockedChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "arg",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "vowelsAvailableChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "arg",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "wordsGivenChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "arg",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "wordsGuessedCorrectlyChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "arg",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "scoreChanged",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "private",
+                    "arguments": [
+                        {
+                            "name": "letter",
+                            "type": "QChar"
+                        }
+                    ],
+                    "name": "registerLetterBought",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "hangmangame.h",
+    "outputRevision": 68
+}

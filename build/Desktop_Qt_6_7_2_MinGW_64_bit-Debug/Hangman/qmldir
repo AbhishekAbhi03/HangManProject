@@ -1,0 +1,19 @@
+module Hangman
+typeinfo hangman.qmltypes
+prefer :/
+GameView 1.0 qml/GameView.qml
+GuessWordView 1.0 qml/GuessWordView.qml
+Hangman 1.0 qml/Hangman.qml
+HowToView 1.0 qml/HowToView.qml
+Key 1.0 qml/Key.qml
+Letter 1.0 qml/Letter.qml
+LetterSelector 1.0 qml/LetterSelector.qml
+MainView 1.0 qml/MainView.qml
+PageHeader 1.0 qml/PageHeader.qml
+ScoreItem 1.0 qml/ScoreItem.qml
+SimpleButton 1.0 qml/SimpleButton.qml
+SplashScreen 1.0 qml/SplashScreen.qml
+StoreItem 1.0 qml/StoreItem.qml
+StoreView 1.0 qml/StoreView.qml
+Word 1.0 qml/Word.qml
+

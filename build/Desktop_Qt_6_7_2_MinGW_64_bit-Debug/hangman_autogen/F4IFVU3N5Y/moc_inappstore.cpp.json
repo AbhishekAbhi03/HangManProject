@@ -1,0 +1,121 @@
+{
+    "classes": [
+        {
+            "className": "InAppStore",
+            "methods": [
+                {
+                    "access": "public",
+                    "name": "restorePurchases",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "productType",
+                            "type": "InAppProduct::ProductType"
+                        },
+                        {
+                            "name": "identifier",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "registerProduct",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "identifier",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "registeredProduct",
+                    "returnType": "InAppProduct*"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "propertyName",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "value",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "setPlatformProperty",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "qualifiedClassName": "InAppStore",
+            "signals": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "product",
+                            "type": "InAppProduct*"
+                        }
+                    ],
+                    "name": "productRegistered",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "productType",
+                            "type": "InAppProduct::ProductType"
+                        },
+                        {
+                            "name": "identifier",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "productUnknown",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "transaction",
+                            "type": "InAppTransaction*"
+                        }
+                    ],
+                    "name": "transactionReady",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "private",
+                    "name": "registerPendingProducts",
+                    "returnType": "void"
+                },
+                {
+                    "access": "private",
+                    "arguments": [
+                        {
+                            "type": "InAppProduct*"
+                        }
+                    ],
+                    "name": "registerProduct",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "inappstore.h",
+    "outputRevision": 68
+}

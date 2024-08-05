@@ -1,0 +1,30 @@
+{
+    "classes": [
+        {
+            "classInfos": [
+                {
+                    "name": "QML.Element",
+                    "value": "Store"
+                }
+            ],
+            "className": "InAppStoreQmlType",
+            "methods": [
+                {
+                    "access": "public",
+                    "name": "restorePurchases",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "qualifiedClassName": "InAppStoreQmlType",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "inappstoreqmltype.h",
+    "outputRevision": 68
+}

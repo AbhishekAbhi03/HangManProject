@@ -1,0 +1,148 @@
+{
+    "classes": [
+        {
+            "classInfos": [
+                {
+                    "name": "QML.Element",
+                    "value": "Transaction"
+                },
+                {
+                    "name": "QML.Foreign",
+                    "value": "QQmlTypeNotAvailable"
+                }
+            ],
+            "className": "InAppTransaction",
+            "enums": [
+                {
+                    "isClass": false,
+                    "isFlag": false,
+                    "name": "TransactionStatus",
+                    "values": [
+                        "Unknown",
+                        "PurchaseApproved",
+                        "PurchaseFailed",
+                        "PurchaseRestored"
+                    ]
+                },
+                {
+                    "isClass": false,
+                    "isFlag": false,
+                    "name": "FailureReason",
+                    "values": [
+                        "NoFailure",
+                        "CanceledByUser",
+                        "ErrorOccurred"
+                    ]
+                }
+            ],
+            "methods": [
+                {
+                    "access": "public",
+                    "name": "finalize",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "propertyName",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "platformProperty",
+                    "returnType": "QString"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "status",
+                    "read": "status",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "TransactionStatus",
+                    "user": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "product",
+                    "read": "product",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "InAppProduct*",
+                    "user": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 2,
+                    "name": "orderId",
+                    "read": "orderId",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 3,
+                    "name": "failureReason",
+                    "read": "failureReason",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "FailureReason",
+                    "user": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 4,
+                    "name": "errorString",
+                    "read": "errorString",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 5,
+                    "name": "timestamp",
+                    "read": "timestamp",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QDateTime",
+                    "user": false
+                }
+            ],
+            "qualifiedClassName": "InAppTransaction",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "inapptransaction.h",
+    "outputRevision": 68
+}

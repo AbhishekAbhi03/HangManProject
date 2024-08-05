@@ -1,0 +1,61 @@
+{
+    "classes": [
+        {
+            "className": "InAppPurchaseBackend",
+            "object": true,
+            "qualifiedClassName": "InAppPurchaseBackend",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "ready",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "transaction",
+                            "type": "InAppTransaction*"
+                        }
+                    ],
+                    "name": "transactionReady",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "productType",
+                            "type": "InAppProduct::ProductType"
+                        },
+                        {
+                            "name": "identifier",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "productQueryFailed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "product",
+                            "type": "InAppProduct*"
+                        }
+                    ],
+                    "name": "productQueryDone",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "inapppurchasebackend.h",
+    "outputRevision": 68
+}
